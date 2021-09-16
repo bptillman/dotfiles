@@ -1,0 +1,27 @@
+[core]
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+	autocrlf = true
+[diff]
+	guitool = bc
+[difftool "bc"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+	guitool = bc
+[mergetool "bc"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[pull]
+	rebase = true
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[mergetool]
+	keepBackup = false
+[alias]
+	prune-stale-branches = remote prune origin
+	delete-remote-branch = push origin --delete
+	pop = reset head~ --mixed
+[push]
+	default = simple
